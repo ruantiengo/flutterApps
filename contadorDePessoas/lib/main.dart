@@ -20,6 +20,9 @@ class _HomeState extends State<Home> {
   void _changePeople(int x) {
     setState(() {
       _people += x;
+      if (_people < 0) {
+        _people = 0;
+      }
     });
   }
 
